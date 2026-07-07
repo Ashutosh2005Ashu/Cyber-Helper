@@ -70,7 +70,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleUnexpected(Exception ex, HttpServletRequest request) {
         log.error("Unhandled exception at {}", request.getRequestURI(), ex);
-        return error(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred", request);
+        Map<String, Object> body = error(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred: " + ex.getClass().getSimpleName() + " - " + ex.getMessage(), request).getBody();
+        if (ex.getCause() != null) {
+            body.put("cause", ex.getCause().getClass().getSimpleName() + " - " + ex.getCause().getMessage());
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(body);
     }
 
     private ResponseEntity<Map<String, Object>> error(HttpStatus status, String message, HttpServletRequest request) {
