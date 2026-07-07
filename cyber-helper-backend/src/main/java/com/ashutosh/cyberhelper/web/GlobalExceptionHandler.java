@@ -5,6 +5,7 @@ import com.ashutosh.cyberhelper.exception.InvalidCredentialsException;
 import com.ashutosh.cyberhelper.exception.InvalidTokenException;
 import com.ashutosh.cyberhelper.exception.OrganizationNotFoundException;
 import com.ashutosh.cyberhelper.exception.RoleNotFoundException;
+import com.ashutosh.cyberhelper.exception.DocumentNotFoundException;
 import com.ashutosh.cyberhelper.exception.UserNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -28,7 +29,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({
             UserNotFoundException.class,
             OrganizationNotFoundException.class,
-            RoleNotFoundException.class
+            RoleNotFoundException.class,
+            DocumentNotFoundException.class
     })
     public ResponseEntity<Map<String, Object>> handleNotFound(RuntimeException ex, HttpServletRequest request) {
         return error(HttpStatus.NOT_FOUND, ex.getMessage(), request);
@@ -48,12 +50,14 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(DuplicateResourceException.class)
-    public ResponseEntity<Map<String, Object>> handleConflict(DuplicateResourceException ex, HttpServletRequest request) {
+    public ResponseEntity<Map<String, Object>> handleConflict(DuplicateResourceException ex,
+            HttpServletRequest request) {
         return error(HttpStatus.CONFLICT, ex.getMessage(), request);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, Object>> handleValidation(MethodArgumentNotValidException ex, HttpServletRequest request) {
+    public ResponseEntity<Map<String, Object>> handleValidation(MethodArgumentNotValidException ex,
+            HttpServletRequest request) {
         Map<String, String> errors = new LinkedHashMap<>();
         for (FieldError fieldError : ex.getBindingResult().getFieldErrors()) {
             errors.put(fieldError.getField(), fieldError.getDefaultMessage());

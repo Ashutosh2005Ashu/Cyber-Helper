@@ -40,3 +40,7 @@ logging:
 jwt:
   secret: cyber-helper-super-secret-key-min-32-chars-required-for-security
   expiration: 3600000
+
+app:
+  storage:
+    upload-dir: storage/uploads/sebi

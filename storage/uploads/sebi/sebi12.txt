@@ -1,0 +1,170 @@
+
+               ***********************************                                                  
+                                                                                                    
+                                                                                                    
+                                                                                                    
+ CIR No. 19/2004                                          19 May 2004                               
+                               CIRCULAR                                                             
+To                                                                                                  
+All Members                                                                                         
+Sub: Use of STP System for all institutional trades w.e.f. July 1, 2004                             
+                                                                                                    
+Circular No.  DNPD/Cir-23/04 dated April 27, 2004 received from                                     
+SEBI on the subject is reproduced below for the information of members.                             
+                                                                                                    
+(V. Shanmugam)                                                                                      
+Manager                                                                                             
+                                                                                                    
+****************************************************************************                      GE
+                                                                                                    
+                                                       April 27, 2004                               
+                                                                                                    
+All Exchanges, Clearing Corporation / Clearing House,                                               
+Depositories, Custodians, AMFI, STP service providers and STP Centralized Hub                       
+                                                                                                    
+Dear Sir,                                                                                           
+                                                                                                    
+1) Further to the circular no. DNPD/Cir-22/2004 dated April 1, 2004 mandating                       
+ the use of the Straight Through Processing (STP) System for all institutional                      
+ trades w. e. f. July 1, 2004. The present circular contains the detailed                           
+system flow which was referred to in the said circular.                                             
+                                                                                                    
+2) The system flow of the STP framework would be as follows:                                        
+                                                                                                    
+a) A STP user intending to send an instruction would send the message to his                        
+\STP service provider after digitally signing the same.                                             
+                                                                                                    
+b) The STP service provider would verify the signature of the STP user and                          
+ forward it to the                                                                                  
+                                                                                                    
+i) recipient STP user, if the recipient STP user is availing services of the                        
+ same STP service provider; or the                                                                  
+ii) STP centralized hub if the recipient STP user is not with the same STP                          
+service provider. In such a case the STP service provider would be required                         
+to prepare a message as per the STP centralized hub prescribed message format,                      
+ enclose the user’s message, digitally sign the message and then send it to                         
+the STP centralized hub                                                                             
+                                                                                                    
+c) On receipt of the message by the STP centralized hub, the STP centralized                        
+ hub would                                                                                          
+i) verify the signature of the sending STP service provider only.                                   
+ii) send an acknowledgment to the sending STP service provider.                                     
+                                                                                                    
+d) The STP centralized hub would forward the message to the recipient STP                           
+service provider after digitally signing on the message.                                            
+                                                                                                    
+e) The recipient STP service provider on receipt of the message from the STP                        
+ centralized hub, shall verify the signature of the STP centralized hub,                            
+verify if the recipient STP user is associated with itself and send an                              
+appropriate acknowledgment with digital signature to the STP centralized hub.                       
+ The STP centralized hub would in turn forward the acknowledgment (received                         
+from the recipient STP service provider) duly signed to the sending STP                             
+service provider.                                                                                   
+                                                                                                    
+f) The recipient STP service provider shall forward the message to the                              
+recipient STP user.  The recipient STP user would receive the message and                           
+verify the signature of the recipient STP service provider and sending STP                          
+ user.                                                                                              
+                                                                                                    
+3) To enable inter-operation, the STP centralized hub would provide a                               
+utility / client software to the STP service provider. The STP service                              
+ provider’s point of interface with the STP centralized hub would be                                
+through this utility / client software. The PKI (Public key infrastructure)                         
+ system for the interface shall be implemented at a later stage.                                    
+                                                                                                    
+4) The block diagram of the entire STP System is enclosed in Annexure I.                            
+                                                                                                    
+5) This circular is being issued in exercise of powers conferred by                                 
+section 11 (1) of the Securities and Exchange Board of India Act, 1992,                             
+ read with section 10 of the Securities Contracts(regulation) Act 1956,                             
+to protect the interests of investors in securities and to promote the                              
+development of, and to regulate the securities market.                                              
+                                                                                                    
+Yours faithfully,                                                                                   
+                                                                                                    
+D. RAVIKUMAR                                                                                        
+                                                                                                    
+               ***********************************                                                  
+                                                                                                    
+                                                                                                    
+                                                                                                    
+ CIR No. 20/2004                                            19 May 2004                             
+                               CIRCULAR                                                             
+To                                                                                                  
+All Members                                                                                         
+Sub: Frequent change of names by listed companies                                                   
+                                                                                                    
+Letter  No.  SEBI/MRD/Policy/AT/Cir-20/2004  dated April 30, 2004 received                          
+from SEBI on the subject is reproduced below for the information of members.                        
+                                                                                                    
+(V. Shanmugam)                                                                                      
+Manager                                                                                             
+                                                                                                    
+****************************************************************************                        
+DEPUTY GENERAL MANAGER                                                                              
+Market Regulation Department                                                                        
+E-mail: sundaresanvs@sebi.gov.in                                                                    
+                                              SEBI/MRD/Policy/AT/Cir-20/2004                        
+                                              April 30, 2004                                        
+                                                                                                    
+The Executive Directors / Managing Directors/Administrators                                         
+of All Stock Exchanges                                                                              
+                                                                                                    
+                                                                                                    
+Dear Sir / Madam,                                                                                   
+                                                                                                    
+Sub: Frequent change of names by listed companies                                                   
+                                                                                                    
+1. Please refer to SEBI circular No. SMDRP/POLICY/CIR- 8/99 dated April 26,                         
+ 1999  wherein it has been provided that companies who change their name                            
+suggesting any new line of business (including software business), shall                            
+disclose the turnover and income, etc., from such new activities separately                         
+ in the quarterly/annual results required to be submitted/published in                              
+compliance with these clauses.  It was further provided that companies                              
+which have changed their names after January 1, 1998 or change the name                             
+hereafter shall make such disclosures and shall continue to make these                              
+disclosures for a period of 3 years from the date of change in the name.                            
+                                                                                                    
+2. In addition to the above provisions, it has now been decided that all                            
+listed companies which decide to change their names shall be required to                            
+ comply with the following conditions:                                                              
+                                                                                                    
+2.1 A time period of atleast 1 year should have elapsed from the last                               
+name change                                                                                         
+                                                                                                    
+2.2 Atleast 50% of its total revenue in the preceding 1 year period should                          
+ have been accounted for by the new activity suggested by the new name                              
+                                                                                                    
+2.3 The new name along with the old name shall be disclosed through the web                         
+ sites of the respective stock exchange/s where the company is listed and                           
+also through the EDIFAR web site for a continuous period of one year, from                          
+ the date of the last name change.                                                                  
+                                                                                                    
+                                                                                                    
+3. The Stock Exchanges are advised to                                                               
+                                                                                                    
+                                                                                                    
+3.1 make necessary amendments to the relevant bye-laws, rules, regulations                          
+and the listing agreement for the implementation of the above decision                              
+immediately.                                                                                        
+                                                                                                    
+3.2 Bring the provisions of this circular to the notice of the member                               
+brokers/clearing members and listed companies of the Exchange and also                              
+to disseminate the same on the website.                                                             
+                                                                                                    
+3.3 communicate to SEBI, the status of the implementation of the provisions                         
+ of this circular in Section II, item no. 13 of the Monthly Development                             
+Report for the month of May, 2004.                                                                  
+                                                                                                    
+                                                                                                    
+4. This circular is being issued in exercise of powers conferred under                              
+Section 11 (1) of the Securities and Exchange Board of India Act, 1992,                             
+to protect the interests of investors in securities and to promote the                              
+development of, and to regulate the securities market.                                              
+                                                                                                    
+                                                                                                    
+Yours faithfully,                                                                                   
+                                                                                                    
+V S SUNDARESAN                                                                                      
+                                                                                                    
+

@@ -1,0 +1,13 @@
+SECURITIES AND EXCHANGE BOARD OF INDIA 
+SECONDARY MARKET DEPARTMENT 
+Mittal Court, A Wing, Gr. Floor, 
+224, Nariman Point, Mumbai 400 021
+SMDRP/POLICY/CIR-56/00 
+December 15, 2000
+ To:The President/Executive Director/ 
+Managing Director of all the Stock ExchangesDear Sir/Madam,Use of Digital Signature on Contract NotesFollowing passing of the Information Technology Act, 2000 (IT Act), contract notes with digital signatures are legally valid. This issue was discussed in the meeting of the Secondary Market Advisory Committee (SMAC) of SEBI held on November 28, 2000.Pursuant to the discussions in the SMAC and provisions of the IT Act, it is clarified that the brokers are allowed to issue contract notes authenticated by means of digital signatures provided that the broker has obtained digital signature certificate from Certifying Authority under the IT Act, 2000. Mode of confirmation by the client may be as specified in the agreement between the broker and the client.Yours faithfully, 
+ P. K. BINDLISH 
+DIVISION CHIEF 
+SECONDARY MARKET, DEPOSITORY, 
+RESEARCH & PUBLICATIONS DEPARTMENT 
+E-Mail : pkb@sebi.gov.in

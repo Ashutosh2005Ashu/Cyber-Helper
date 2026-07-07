@@ -107,13 +107,15 @@ com.ashutosh.cyberhelper
 
 Current packages:
 
+bootstrap
 config
-controller
 dto
 entity
+exception
 repository
 security
 service
+web
 
 ===========================================================
 IMPORTANT ARCHITECTURE RULES
@@ -121,7 +123,7 @@ IMPORTANT ARCHITECTURE RULES
 
 Use clean layered architecture.
 
-Controller
+web
 
 ↓
 
@@ -135,7 +137,7 @@ Repository
 
 Database
 
-Controllers must never access repositories directly.
+web must never access repositories directly.
 
 Business logic belongs only inside services.
 
@@ -364,6 +366,17 @@ Llama3
 Chat Service
 
 Retrieval Augmented Generation
+
+Frontend
+│
+▼
+Spring Boot
+│
+├── PostgreSQL
+│
+├── Qdrant
+│
+└── Ollama (Llama 3)
 
 ---------------------------------------------------------
 

@@ -1,0 +1,51 @@
+Like
+
+Dislike
+SEBI circular MRD/DoP/SE/Cir-03/2009 permits institutional investors to use Direct Market Access (DMA) through SEBI-registered investment managers under specified conditions.
+Purpose and Scope
+The circular was issued to clarify and extend the Direct Market Access (DMA) facility introduced earlier by SEBI through circular MRD/DoP/SE/Cir-7/2008 dated April 3, 2008. It specifically allows institutional investors to access DMA via investment managers, ensuring proper authorization, documentation, and compliance with SEBI and exchange requirements 
+NSE India
+NSE India
++1
+.
+
+Key Provisions
+DMA through Investment Managers: Institutional clients may use DMA through SEBI-registered investment managers. The investment manager can execute necessary documents on behalf of the client, provided there is proper authorization and agreements in place 
+NSE India
+NSE India
++1
+.
+Broker-Client Agreement: The agreement must include details of the investment manager, their registration or regulation, roles, responsibilities, and safeguards to ensure DMA is used only for authorized clients 
+NSE India
+NSE India
++1
+.
+Audit and Compliance: Brokers and exchanges must maintain proper audit trails to identify the ultimate client and ensure compliance with operational and risk management requirements as per SEBI circular MRD/DoP/SE/Cir-7/2008 
+NSE India
+NSE India
++1
+.
+Application and Approval: Members seeking to offer DMA must apply to the exchange, which grants permission on a case-by-case basis after verifying compliance with SEBI and exchange minimum requirements 
+NSE India
+NSE India
+.
+Documentation Standardization: The circular later led to the replacement of specific Broker-Client Agreements for DMA with a standardized Terms and Conditions document to ensure uniformity in trading account opening processes 
+corporatelawreporter.com
+corporatelawreporter.com
+.
+Regulatory Authority
+The circular was issued under Section 11 of the SEBI Act, 1992, empowering SEBI to protect investor interests and regulate the securities market 
+Tax Guru
+Tax Guru
++1
+.
+
+Relationship with Previous Circulars
+Builds upon SEBI circular MRD/DoP/SE/Cir-7/2008, which introduced DMA.
+Clarifies client authorization, broker-client agreements, and investment manager roles.
+Certain provisions of the 2009 circular were later modified or deleted in subsequent circulars to streamline DMA processes 
+corporatelawreporter.com
+corporatelawreporter.com
+.
+Summary
+SEBI circular MRD/DoP/SE/Cir-03/2009 primarily enables institutional investors to access DMA via investment managers, establishes documentation and compliance requirements, and ensures auditability and investor protection. It forms a key regulatory framework for DMA operations in India, balancing efficiency in trading with risk management and accountability

@@ -1,0 +1,22 @@
+SECURITIES AND EXCHANGE BOARD OF INDIAGUIDELINES
+FOR OPENING OF TRADING TERMINALS ABROADWith the rapid expansion of the Indian capital market and with the fund managers all over the world showing a keen interest in investing a large number of their portfolios in the Indian markets, it was felt that a facility should be provided whereby an eligible overseas investor can place an order on a real-time basis, rather than telephonically.The Stock Exchanges/ Members shall follow the following guidelines for opening and maintaining the trading terminals abroad :
+Eligibility Criteria
+Such trading terminals shall be opened only by the Stock Brokers of the stock exchanges registered with SEBI and opening of terminals through sub-brokers shall not be permitted. These terminals shall be opened by the members only after obtaining permission from the respective stock exchanges.
+RBI Permission
+Such terminals abroad would be opened subject to the guidelines laid down by the RBI from time to time. Presently, RBI has laid down norms for opening of such offices abroad under general permission in their circular A.D.( M.A. Series) Circular No.42 dated October 27, 1997. (Copy enclosed)
+Permission by the Foreign Regulatory Authorities
+The installation of such trading terminals shall be subject to the prior permission of the concerned regulatory authorities of the respective foreign countries, wherever required.
+Operation of the terminals
+Any investor abroad who is permitted to invest in India i.e. NRIs/OCBs/FIIs/PIOs shall be able to place orders on the trading terminal of the Exchange available at the office of the Indian broker maintained abroad. The order fed on the live terminal shall be executed on the computer of the Exchange in India. The service to the clients shall be provided by the broker’s overseas office and its local office. These terminals shall include any of other options that the respective exchange may provide for connecting its trading terminal abroad to its trading system in India.
+Contract Note
+The contract note in favour of the client abroad shall be issued in India, however the same could be printed in the broker’s office abroad and shall be subject to the jurisdiction of the respective stock exchanges.
+Capital Adequacy, Margins System & Brokerage
+All such trades would be subject to usual margins, capital adequacy and intra-day trading limits and such other requirements fixed for the brokers by the Exchange.The respective stock exchange shall ensure that investors do not pay the brokerage on such trades exceeding the maximum brokerage permitted as per the rules, regulations and bye-laws of the exchange.No Negotiated Deals shall be permitted through these terminals and only screen based order matching system shall be available on these terminals.
+Settlement Procedure
+All trades shall be settled in India in dematerialized form only.Clients with status of FIIs shall settle the trade through their registered custodian/ designated bank.Clients with the status of NRIs/PIOs/OCBs shall settle the trade through a designated bank. Such a designated bank shall be responsible for repatriation of funds.
+Monitoring & Surveillance
+The respective stock exchange shall ensure that there is adequate monitoring and surveillance mechanism for such overseas terminals in order to oversee trades.
+Grievance Redressal Mechanism
+The investors’ grievance for such cases shall be resolved by the respective Indian Stock Exchange through the existing arbitration mechanism.The concerned Stock Exchange shall ensure that their members have the adequate arrangements for resolving the investors grievances and timely settlement of arbitration cases arising out of trades which are executed on these terminals.
+Jurisdiction
+The agreement between the trading member and constituent should, inter alia, state that, all trades, transactions and contracts are subject to the Rules, Bye Laws and Regulations of the Exchange and shall be deemed to be and shall take effect as wholly made, entered into and to be performed in the city of __ , India for the purpose of giving effect to the provisions of the Rules, Bye Laws and Regulations of the Exchange

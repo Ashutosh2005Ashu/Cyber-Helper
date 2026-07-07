@@ -1,0 +1,15 @@
+SUMMARY: CERT-IN CYBER SECURITY AUDIT GUIDELINES
+FOR THE AUDITEE
+-- Asset & Scope Management: Maintain a centralized asset inventory to define a comprehensive audit scope.
+-- Audit Frequency: Conduct full infrastructure cyber security audits at least once a year.
+-- Procurement Security: Mandate "Secure by Design" practices and secure coding in all software RFPs and tenders.
+-- Remediation: Ensure time-bound patching of all identified vulnerabilities.
+-- Re-validation: Mandate follow-up audits to officially validate the closure of all security risks.
+FOR THE AUDITOR
+-- Independence: Maintain strict objectivity; audit fees must never be tied to the audit's outcome.
+-- Testing Standards: Use comprehensive industry frameworks (e.g., ISO/IEC, OWASP) rather than relying solely on automated scanning tools.
+-- Safe Execution: Obtain explicit, written permission before running disruptive tests like Denial-of-Service (DoS) or social engineering.
+-- Risk Scoring: Categorize all vulnerabilities using both CVSS (technical severity) and EPSS (real-world exploitation likelihood).
+-- Data Security: Store data securely within India and forensically wipe all auditee data upon project completion.
+-- CERT-In Reporting: Submit audit metadata and the final report to CERT-In within 5 days of completing the engagement.
+-- Accountability: Face strict penalties (including suspension or de-empanelment) for substandard audits, missed vulnerabilities, or ethical violations.
