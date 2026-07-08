@@ -1,9 +1,11 @@
 package com.ashutosh.cyberhelper.web;
 
+import com.ashutosh.cyberhelper.dto.document.DocumentProcessingResponse;
 import com.ashutosh.cyberhelper.dto.document.DocumentResponse;
 import com.ashutosh.cyberhelper.dto.document.DocumentScanResponse;
 import com.ashutosh.cyberhelper.entity.DocumentStatus;
 import com.ashutosh.cyberhelper.entity.DocumentType;
+import com.ashutosh.cyberhelper.service.DocumentProcessingService;
 import com.ashutosh.cyberhelper.service.DocumentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,8 +40,8 @@ import java.util.List;
  * <li>Admin calls {@code POST /documents/scan} to register them</li>
  * <li>Admin calls {@code PATCH /documents/{id}/status} to mark them as
  * {@code READY_FOR_PROCESSING}</li>
- * <li>Week 4: Processing service picks up {@code READY_FOR_PROCESSING}
- * documents</li>
+ * <li>Admin calls {@code POST /documents/{id}/process} to trigger text
+ * extraction</li>
  * </ol>
  *
  * <p>
@@ -53,9 +55,13 @@ import java.util.List;
 public class DocumentController {
 
     private final DocumentService documentService;
+    private final DocumentProcessingService documentProcessingService;
 
-    public DocumentController(DocumentService documentService) {
+    public DocumentController(
+            DocumentService documentService,
+            DocumentProcessingService documentProcessingService) {
         this.documentService = documentService;
+        this.documentProcessingService = documentProcessingService;
     }
 
     /**
@@ -92,7 +98,8 @@ public class DocumentController {
     /**
      * Returns all documents with the given processing status.
      *
-     * @param status one of UPLOADED, REGISTERED, READY_FOR_PROCESSING
+     * @param status one of UPLOADED, REGISTERED, READY_FOR_PROCESSING, PROCESSING,
+     *               PROCESSED, FAILED
      */
     @GetMapping("/status/{status}")
     public ResponseEntity<List<DocumentResponse>> getDocumentsByStatus(
@@ -127,6 +134,20 @@ public class DocumentController {
     }
 
     /**
+     * Bulk updates all REGISTERED documents to READY_FOR_PROCESSING.
+     *
+     * <p>
+     * Use this once to prepare already-registered documents for the Week 4
+     * parsing pipeline. New documents registered after this change are
+     * automatically set to READY_FOR_PROCESSING at scan time.
+     * </p>
+     */
+    @PostMapping("/status/ready-all")
+    public ResponseEntity<List<DocumentResponse>> bulkReadyAll() {
+        return ResponseEntity.ok(documentService.updateAllRegisteredToReady());
+    }
+
+    /**
      * Deletes a document's metadata from the database.
      * By default, only the database record is removed.
      * Pass {@code deleteFile=true} to also delete the physical file from disk.
@@ -141,5 +162,36 @@ public class DocumentController {
             @RequestParam(defaultValue = "false") boolean deleteFile) {
         documentService.deleteDocument(id, deleteFile);
         return ResponseEntity.noContent().build();
+    }
+
+    // ─── Week 4: Document Processing Endpoints ─────────────────
+
+    /**
+     * Triggers text extraction and metadata parsing for a single document.
+     * The document must have status {@code READY_FOR_PROCESSING}.
+     *
+     * <p>
+     * Pipeline: Parse (PDFBox/TXT) → Clean → Extract Metadata → Store
+     * </p>
+     *
+     * @param id document ID
+     * @return processing result with extracted metadata
+     */
+    @PostMapping("/{id}/process")
+    public ResponseEntity<DocumentProcessingResponse> processDocument(@PathVariable Long id) {
+        DocumentProcessingResponse response = documentProcessingService.processDocument(id);
+        return ResponseEntity.ok(response);
+    }
+
+    /**
+     * Triggers text extraction for all documents with status
+     * {@code READY_FOR_PROCESSING}.
+     *
+     * @return list of processing results (one per document)
+     */
+    @PostMapping("/process-all")
+    public ResponseEntity<List<DocumentProcessingResponse>> processAllDocuments() {
+        List<DocumentProcessingResponse> responses = documentProcessingService.processAllReady();
+        return ResponseEntity.ok(responses);
     }
 }

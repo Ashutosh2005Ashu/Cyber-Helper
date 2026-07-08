@@ -29,5 +29,14 @@ public enum DocumentStatus {
 
     UPLOADED,
     REGISTERED,
-    READY_FOR_PROCESSING
+    READY_FOR_PROCESSING,
+
+    /** Week 4: Text extraction is currently in progress. */
+    PROCESSING,
+
+    /** Week 4: Text extraction completed successfully. */
+    PROCESSED,
+
+    /** Week 4: Text extraction failed (see processingError on Document). */
+    FAILED
 }

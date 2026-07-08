@@ -102,4 +102,34 @@ public class Document {
     @UpdateTimestamp
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+    // ─── Week 4: Document processing fields ───────────────────
+
+    /** Number of pages extracted from PDF. 1 for TXT files. */
+    @Column(name = "page_count")
+    private Integer pageCount;
+
+    /** SEBI circular number, e.g. "SEBI/HO/MRD/TPD/P/CIR/2023/165". */
+    @Column(name = "circular_number", length = 500)
+    private String circularNumber;
+
+    /** Title of the circular, extracted from the document text. */
+    @Column(name = "circular_title", length = 1000)
+    private String circularTitle;
+
+    /** Date of the circular as it appears in the document (stored as-is). */
+    @Column(name = "circular_date", length = 100)
+    private String circularDate;
+
+    /** Comma-separated clause/section references found in the document. */
+    @Column(name = "clause_references", length = 2000)
+    private String clauseReferences;
+
+    /** Error message if processing failed. */
+    @Column(name = "processing_error", length = 2000)
+    private String processingError;
+
+    /** Timestamp when document processing completed (success or failure). */
+    @Column(name = "processed_at")
+    private LocalDateTime processedAt;
 }

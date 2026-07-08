@@ -58,18 +58,17 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/register", "/auth/login").permitAll()
                         .requestMatchers("/error").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .exceptionHandling(exception -> exception.authenticationEntryPoint((request, response, authException) -> {
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-                    objectMapper.writeValue(response.getWriter(), Map.of(
-                            "status", 401,
-                            "error", "Unauthorized",
-                            "message", authException.getMessage(),
-                            "path", request.getRequestURI()
-                    ));
-                }))
+                        .anyRequest().authenticated())
+                .exceptionHandling(
+                        exception -> exception.authenticationEntryPoint((request, response, authException) -> {
+                            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                            response.setContentType(MediaType.APPLICATION_JSON_VALUE);
+                            objectMapper.writeValue(response.getWriter(), Map.of(
+                                    "status", 401,
+                                    "error", "Unauthorized",
+                                    "message", authException.getMessage(),
+                                    "path", request.getRequestURI()));
+                        }))
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

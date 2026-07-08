@@ -216,6 +216,24 @@ public class DocumentService {
     }
 
     /**
+     * Bulk updates all documents with status REGISTERED to READY_FOR_PROCESSING.
+     */
+    @Transactional
+    public List<DocumentResponse> updateAllRegisteredToReady() {
+        List<Document> documents = documentRepository.findByStatus(DocumentStatus.REGISTERED);
+        log.info("Bulk updating {} registered documents to READY_FOR_PROCESSING", documents.size());
+        
+        for (Document document : documents) {
+            document.setStatus(DocumentStatus.READY_FOR_PROCESSING);
+        }
+        
+        return documentRepository.saveAll(documents)
+                .stream()
+                .map(DocumentResponse::from)
+                .toList();
+    }
+
+    /**
      * Deletes a document's metadata from the database.
      *
      * <p>
@@ -288,7 +306,7 @@ public class DocumentService {
                 .documentType(DocumentType.OTHER)
                 .filePath(uploadDirectory.resolve(fileName).toString())
                 .fileSize(fileSize)
-                .status(DocumentStatus.REGISTERED)
+                .status(DocumentStatus.READY_FOR_PROCESSING)   // auto-ready for Week 4 pipeline
                 .uploadDate(lastModified)
                 .build();
 
