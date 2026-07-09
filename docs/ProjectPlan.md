@@ -341,7 +341,7 @@ Document Processing
 
 Week 5
 
-Qdrant Integration
+pg vector integration
 
 Chunking
 

@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:16.4
+    # pgvector/pgvector ships with the vector extension pre-installed.
+    # This replaces postgres:16.4 — same PostgreSQL 16 engine, zero data-loss.
+    image: pgvector/pgvector:pg16
     container_name: cyber-helper-postgres
     environment:
       POSTGRES_DB: cyber_helper_db
@@ -12,6 +14,8 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - cyber-network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U cyber_user -d cyber_helper_db"]
       interval: 10s

@@ -24,6 +24,13 @@ spring:
       name: admin
       password: admin
 
+  # Week 5: Run the pgvector extension DDL before Hibernate creates tables.
+  # Spring will execute this file once on startup (idempotent — uses IF NOT EXISTS).
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/pgvector-init.sql
+
 server:
   port: 8080
   servlet:
@@ -44,3 +51,9 @@ jwt:
 app:
   storage:
     upload-dir: storage/uploads/sebi
+  # Week 5: Chunking strategy config
+  chunking:
+    # Target size of each text chunk in characters (~200 tokens for nomic-embed-text)
+    chunk-size: 800
+    # Overlap between consecutive chunks so context is not lost at boundaries
+    overlap: 150
